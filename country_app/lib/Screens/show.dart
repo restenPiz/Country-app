@@ -11,6 +11,9 @@ class showScreen extends StatefulWidget {
 class _showScreenState extends State<showScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(title: Text('Country App - Details'),),
+      body: ListView(),
+    );
   }
 }
