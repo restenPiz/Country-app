@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -6,9 +8,14 @@ void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
   //!Inicio do metodo responsavel por fazer o fetch dos dados
   Future<void> fetchData() async {
 
@@ -24,9 +31,13 @@ class MainApp extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
+    fetchData(); // Buscar dados da API quando o widget é inicializado
+  }
 
-    fetchData();
+  @override
+  Widget build(BuildContext context) {
 
     return MaterialApp(
 
@@ -38,7 +49,17 @@ class MainApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            //?Inicio do conteudo do meu applicativo            
+            
+            //?Inicio do conteudo do meu applicativo  
+            Container(
+              child: Card(
+                child: Column(
+                  children: [
+                    
+                  ],
+                ),
+              ),
+            ),          
           ],
         ),
       ),
