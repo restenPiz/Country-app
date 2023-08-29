@@ -10,6 +10,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+
+      //?Removendo o debugger do meu app
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
