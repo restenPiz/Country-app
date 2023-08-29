@@ -53,8 +53,9 @@ class _MainAppState extends State<MainApp> {
         ),
         body: ListView(
           children: [
+            
+            //?Percorrendo o laco para printar os dados
             for(var item in apiData)
-            //?Inicio do conteudo do meu applicativo  
             Container(
               child: Card(
                 child: Column(
