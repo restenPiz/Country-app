@@ -76,6 +76,8 @@ class _MainAppState extends State<MainApp> {
             ),          
           ],
         ),
+
+        //?Inicio do butao de pesquisa
         floatingActionButton: FloatingActionButton(
           onPressed: (){},
           child: Icon(Icons.search),
