@@ -57,30 +57,25 @@ class _MainAppState extends State<MainApp> {
             //?Percorrendo o laco para printar os dados
             for(var item in apiData)
             Container(
-              child: Card(
-                child: InkWell(
-                  onTap: () { 
-                     Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => ShowDetails(countryData: item),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Colors.black,
+                ),
+                onPressed: (){},
+                child: Column(
+                  children: [
+                    ListTile(
+                      title: Text(item['name']['common']),
+                      subtitle: Text(item['name']['official']),
+                      leading: Image.network(
+                        item['flags']['png'],
+                        width: 80,
+                        height: 48,
+                        fit: BoxFit.cover,
                       ),
-                    );
-                  },
-                  child: Column(
-                    children: [
-                      ListTile(
-                        title: Text(item['name']['common']),
-                        subtitle: Text(item['name']['official']),
-                        leading: Image.network(
-                          item['flags']['png'],
-                          width: 80,
-                          height: 48,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),    
+                  ],
                 ),
               ),
             ),          
@@ -99,10 +94,6 @@ class _MainAppState extends State<MainApp> {
 
 class ShowDetails extends StatelessWidget {
   //const ShowDetails({super.key});
-
-  final Map<String, dynamic> countryData;
-
-  ShowDetails({required this.countryData});
 
   @override
   Widget build(BuildContext context) {
