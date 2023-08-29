@@ -17,6 +17,11 @@ class MainApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Ola Mundo'),
         ),
+        body: ListView(
+          children: [
+            //?Inicio do conteudo do meu applicativo            
+          ],
+        ),
       ),
     );
   }
