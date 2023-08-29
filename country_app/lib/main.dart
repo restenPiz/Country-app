@@ -62,7 +62,16 @@ class _MainAppState extends State<MainApp> {
                   primary: Colors.white,
                   onPrimary: Colors.black,
                 ),
-                onPressed: (){},
+                onPressed: (){
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ShowScreen(),
+                    ),
+                  );
+
+                },
                 child: Column(
                   children: [
                     ListTile(
@@ -88,18 +97,6 @@ class _MainAppState extends State<MainApp> {
           child: Icon(Icons.search),
         ),
       ),
-    );
-  }
-}
-
-class ShowDetails extends StatelessWidget {
-  //const ShowDetails({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Country App - Details'),),
-      body: ListView(),
     );
   }
 }
