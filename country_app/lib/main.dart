@@ -62,12 +62,17 @@ class _MainAppState extends State<MainApp> {
                   children: [
                     ListTile(
                       title: Text(item['name']['common']),
+                      subtitle: Text(item['name']['official']),
                     ),
                   ],
                 ),
               ),
             ),          
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){},
+          child: Icon(Icons.search),
         ),
       ),
     );
