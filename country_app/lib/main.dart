@@ -11,12 +11,14 @@ class MainApp extends StatelessWidget {
 
   //!Inicio do metodo responsavel por fazer o fetch dos dados
   Future<void> fetchData() async {
+
+    //?Declarando uma variable contendo a URL
     final response = await http.get(Uri.parse('https://restcountries.com/v3.1/independent?status=true'));
+    
     if (response.statusCode == 200) {
       final responseData = json.decode(response.body);
       print('Dado do JSON: $responseData');
     } else {
-      // Lidar com erros
       print('Erro na requisição: ${response.statusCode}');
     }
   }
@@ -25,7 +27,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
     fetchData();
-    
+
     return MaterialApp(
 
       //?Removendo o debugger do meu app
