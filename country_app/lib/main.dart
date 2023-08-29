@@ -63,7 +63,7 @@ class _MainAppState extends State<MainApp> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => showScreen(apiData: item),
+                        builder: (context) => showScreen(),
                       ),
                     );
                   },
