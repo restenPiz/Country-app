@@ -1,5 +1,5 @@
 // ignore_for_file: avoid_print, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
-
+import 'package:country_app/Screens/show.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -60,7 +60,12 @@ class _MainAppState extends State<MainApp> {
               child: Card(
                 child: InkWell(
                   onTap: () { 
-                    
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => showScreen(apiData: item),
+                      ),
+                    );
                   },
                   child: Column(
                     children: [
