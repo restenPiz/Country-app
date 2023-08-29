@@ -61,8 +61,6 @@ class _MainAppState extends State<MainApp> {
                 child: Column(
                   children: [
                     ListTile(
-                      title: Text(item['common']),
-                      subtitle: Text(item['official']),
                     ),
                   ],
                 ),
