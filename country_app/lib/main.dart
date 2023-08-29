@@ -63,7 +63,12 @@ class _MainAppState extends State<MainApp> {
                     ListTile(
                       title: Text(item['name']['common']),
                       subtitle: Text(item['name']['official']),
-                      leading: Image.network(item['flags']['png']),
+                      leading: Image.network(
+                        item['flags']['png'],
+                        width: 80,
+                        height: 48,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ],
                 ),
