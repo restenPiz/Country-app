@@ -49,7 +49,7 @@ class _MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Ola Mundo'),
+          title: Text('Country App'),
         ),
         body: ListView(
           children: [
@@ -61,6 +61,7 @@ class _MainAppState extends State<MainApp> {
                 child: Column(
                   children: [
                     ListTile(
+                      title: Text(item['name']['common']),
                     ),
                   ],
                 ),
