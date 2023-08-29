@@ -60,10 +60,10 @@ class _MainAppState extends State<MainApp> {
               child: Card(
                 child: InkWell(
                   onTap: () { 
-                    Navigator.push(
+                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => showScreen(),
+                        builder: (context) => ShowDetails(countryData: item),
                       ),
                     );
                   },
@@ -93,6 +93,22 @@ class _MainAppState extends State<MainApp> {
           child: Icon(Icons.search),
         ),
       ),
+    );
+  }
+}
+
+class ShowDetails extends StatelessWidget {
+  //const ShowDetails({super.key});
+
+  final Map<String, dynamic> countryData;
+
+  ShowDetails({required this.countryData});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Country App - Details'),),
+      body: ListView(),
     );
   }
 }

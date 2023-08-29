@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class showScreen extends StatefulWidget {
-  const showScreen({super.key});
+class ShowScreen extends StatefulWidget {
+  const ShowScreen({super.key});
 
   @override
-  State<showScreen> createState() => _showScreenState();
+  State<ShowScreen> createState() => _ShowScreenState();
 }
 
-class _showScreenState extends State<showScreen> {
+class _ShowScreenState extends State<ShowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
