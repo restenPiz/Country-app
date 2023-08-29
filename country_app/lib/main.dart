@@ -53,13 +53,16 @@ class _MainAppState extends State<MainApp> {
         ),
         body: ListView(
           children: [
-            
+            for(var item in apiData)
             //?Inicio do conteudo do meu applicativo  
             Container(
               child: Card(
                 child: Column(
                   children: [
-                    
+                    ListTile(
+                      title: Text(item['common']),
+                      subtitle: Text(item['official']),
+                    ),
                   ],
                 ),
               ),
