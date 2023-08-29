@@ -16,15 +16,17 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
-  //!Inicio do metodo responsavel por fazer o fetch dos dados
-  Future<void> fetchData() async {
 
-    //?Declarando uma variable contendo a URL
+  //!Inicio do metodo responsavel por fazer o fetch dos dados
+  List<Map<String, dynamic>> apiData = [];
+
+  // Função para buscar dados da API e atualizar o estado
+  Future<void> fetchData() async {
     final response = await http.get(Uri.parse('https://restcountries.com/v3.1/independent?status=true'));
-    
     if (response.statusCode == 200) {
-      final responseData = json.decode(response.body);
-      print('Dado do JSON: $responseData');
+      setState(() {
+        apiData = List<Map<String, dynamic>>.from(json.decode(response.body));
+      });
     } else {
       print('Erro na requisição: ${response.statusCode}');
     }
