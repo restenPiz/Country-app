@@ -40,6 +40,7 @@ class _MainAppState extends State<MainApp> {
     fetchData(); // Buscar dados da API quando o widget é inicializado
   }
 
+  //*Inicio do metodo responsavel por redirecionar para outra widget
   void navigateToShowScreen(Map<String, dynamic> countryData) {
     Navigator.of(context).push(
       MaterialPageRoute(builder: (context) => ShowScreen(countryData: countryData)),
