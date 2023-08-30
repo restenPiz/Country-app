@@ -10,6 +10,8 @@ dependencies:
   flutter:
     sdk: flutter
   http: ^1.0.0
+  flutter_map: ^5.0.0
+  latlng: ^1.0.0
 
 dev_dependencies:
   flutter_test:
