@@ -11,29 +11,35 @@ class ShowScreens extends StatelessWidget {
       appBar: AppBar(
         title: Text('Country Details'),
       ),
-      body: ListView(
-        children: [
-          Column(
-            children: [
-              Container(
-                padding: EdgeInsets.only(top: 10.0),
-                child: Image.network(countryData['flags']['png']),
-              ),
-              Container(
-                child: Column(
-                  children: [
-                    Text(countryData['name']['common'],
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+      body:  Container(
+        color: Color.fromARGB(255, 204, 204, 204),
+        child: ListView(
+          children: [
+            Container(
+              child: Column(
+                children: [
+                  Container(
+                    height: 20,
+                    child: ListTile(
+                      title: Text(countryData['name']['common'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      leading: Image.network(countryData['flags']['png']),
                     ),
-                    Text(countryData['flags']['alt']),
-                  ],
-                ),
+                  ),
+                  Container(
+                    height: 30.0,
+                  ),
+                  Container(
+                    child: Text(countryData['flags']['alt']),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }
