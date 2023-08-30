@@ -1,8 +1,10 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class ShowScreens extends StatelessWidget {
+  
   final Map<String, dynamic> countryData;
 
   const ShowScreens({required this.countryData});
@@ -14,7 +16,7 @@ class ShowScreens extends StatelessWidget {
         title: Text('Country Details'),
       ),
       body:  Container(
-        color: Color.fromARGB(255, 204, 204, 204),
+        color: Color.fromARGB(255, 233, 233, 233),
         child: ListView(
           children: [
             Container(
@@ -68,7 +70,6 @@ class ShowScreens extends StatelessWidget {
                               ),
                             ),
                             Container(
-                              
                             ),
                           ],
                         ),
