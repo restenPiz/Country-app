@@ -47,7 +47,7 @@ class _MainAppState extends State<MainApp> {
   //*Inicio do metodo responsavel por redirecionar para outra widget
   void navigateToShowScreen(Map<String, dynamic> countryData) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => ShowScreen(countryData: countryData)),
+      MaterialPageRoute(builder: (context) => ShowScreens(countryData: countryData)),
     );
   }
 

@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 
-class ShowScreen extends StatefulWidget {
+class ShowScreens extends StatelessWidget {
   final Map<String, dynamic> countryData;
 
-  const ShowScreen({required this.countryData});
+  const ShowScreens({required this.countryData});
 
-  @override
-  State<ShowScreen> createState() => _ShowScreenState();
-}
-
-class _ShowScreenState extends State<ShowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Country App'),
+        title: Text('Country Details'),
       ),
-      body: ListView(
-        children: [
-          Container(
-            child: Text('Nome: ${countryData['name']['common']}'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Country Name: ${countryData['name']['common']}'),
+            // Display other country details as needed
+          ],
+        ),
       ),
     );
   }
