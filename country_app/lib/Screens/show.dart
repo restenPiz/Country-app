@@ -12,7 +12,7 @@ class _ShowScreenState extends State<ShowScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Country App - Details'),),
+      appBar: AppBar(title: Text('Country Ap - Details'),),
       body: ListView(),
     );
   }
