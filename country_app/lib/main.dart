@@ -5,7 +5,10 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MainApp(),
+  ));
 }
 
 class MainApp extends StatefulWidget {
@@ -43,7 +46,7 @@ class _MainAppState extends State<MainApp> {
   //*Inicio do metodo responsavel por redirecionar para outra widget
   void navigateToShowScreen(Map<String, dynamic> countryData) {
     Navigator.of(context).push(
-      MaterialPageRoute(builder: (context) => ShowScreen(countryData: countryData)),
+      MaterialPageRoute(builder: (context) => ShowScreen()),
     );
   }
 
@@ -107,8 +110,6 @@ class _MainAppState extends State<MainApp> {
 //?Inicio da widget que vai ser responsavel por mostrar os detalhes
 
 class ShowScreen extends StatelessWidget {
-  final Map<String, dynamic> countryData;
-  const ShowScreen({required this.countryData});
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +122,6 @@ class ShowScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Country Name: ${countryData['name']['common']}'),
             // Display other country details as needed
           ],
         ),
