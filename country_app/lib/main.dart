@@ -103,6 +103,8 @@ class _MainAppState extends State<MainApp> {
   }
 }
 
+//?Inicio da widget que vai ser responsavel por mostrar os detalhes
+
 class ShowScreen extends StatelessWidget {
   final Map<String, dynamic> countryData;
   const ShowScreen({required this.countryData});
