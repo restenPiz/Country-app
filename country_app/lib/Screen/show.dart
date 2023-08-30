@@ -32,7 +32,7 @@ class ShowScreens extends StatelessWidget {
                   Container(
                     height: 30.0,
                   ),
-                  Container(
+                  Card(
                     child: Text(countryData['flags']['alt']),
                   ),
                 ],
