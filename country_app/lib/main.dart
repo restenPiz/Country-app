@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:country_app/Screens/show.dart';
 
 void main() {
   runApp(const MainApp());
@@ -63,6 +62,8 @@ class _MainAppState extends State<MainApp> {
             //?Percorrendo o laco para printar os dados
             for(var item in apiData)
             ElevatedButton(
+
+              //?Adicionando cor nos butoes
               style: ElevatedButton.styleFrom(
                 primary: Colors.white,
                 onPrimary: Colors.black,
