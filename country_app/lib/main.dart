@@ -81,6 +81,10 @@ class _MainAppState extends State<MainApp> {
               child: Column(
                 children: [
                   ListTile(
+
+                    //*Afastando o listTile para esquerda
+                    contentPadding: EdgeInsets.only(left: 1.0),
+
                     title: Text(item['name']['common']),
                     subtitle: Text(item['name']['official']),
                     leading: Image.network(
