@@ -22,7 +22,12 @@ class ShowScreens extends StatelessWidget {
               Container(
                 child: Column(
                   children: [
-                    Text(countryData['flags']['alt'])
+                    Text(countryData['name']['common'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(countryData['flags']['alt']),
                   ],
                 ),
               ),
