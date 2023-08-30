@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
 class ShowScreens extends StatelessWidget {
@@ -54,6 +56,14 @@ class ShowScreens extends StatelessWidget {
                               textAlign: TextAlign.justify,
                               style: TextStyle(
                                 height: 2,
+                              ),
+                            ),
+                            Text(
+                              'The capital of ${countryData['name']['common']} is ${countryData['capital'][0]}',
+                              textAlign: TextAlign.justify,
+                              style: TextStyle(
+                                height: 2,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
