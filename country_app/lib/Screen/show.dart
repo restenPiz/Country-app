@@ -33,7 +33,16 @@ class ShowScreens extends StatelessWidget {
                     height: 30.0,
                   ),
                   Card(
-                    child: Text(countryData['flags']['alt']),
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0), // Ajuste o valor conforme necessário
+                      child: Text(
+                        countryData['flags']['alt'],
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          height: 2,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
