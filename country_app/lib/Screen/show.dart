@@ -59,6 +59,7 @@ class ShowScreens extends StatelessWidget {
                               ),
                             ),
                             Text(
+                              //?Mix the datas
                               'The capital of ${countryData['name']['common']} is ${countryData['capital'][0]}',
                               textAlign: TextAlign.justify,
                               style: TextStyle(
