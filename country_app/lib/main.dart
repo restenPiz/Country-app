@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: avoid_print, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables, deprecated_member_use
 
 import 'package:country_app/Screen/show.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +27,9 @@ class _MainAppState extends State<MainApp> {
   //? Função para buscar dados da API e atualizar o estado
   Future<void> fetchData() async {
 
-    final response = await http.get(Uri.parse('https://restcountries.com/v3.1/independent?status=true'));
+    final response = await http.get(
+      Uri.parse('https://restcountries.com/v3.1/independent?status=true')
+    );
     
     if (response.statusCode == 200) {
       setState(() {
