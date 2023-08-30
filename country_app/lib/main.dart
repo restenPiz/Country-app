@@ -62,11 +62,8 @@ class _MainAppState extends State<MainApp> {
               ),
               onPressed: (){
 
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ShowScreen(),
-                  ),
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const ShowScreen()),
                 );
 
               },
@@ -90,7 +87,11 @@ class _MainAppState extends State<MainApp> {
 
         //?Inicio do butao de pesquisa
         floatingActionButton: FloatingActionButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const ShowScreen()),
+            );
+          },
           child: Icon(Icons.search),
         ),
       ),
