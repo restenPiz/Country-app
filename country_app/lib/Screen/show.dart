@@ -11,14 +11,20 @@ class ShowScreens extends StatelessWidget {
       appBar: AppBar(
         title: Text('Country Details'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Country Name: ${countryData['name']['common']}'),
-            // Display other country details as needed
-          ],
-        ),
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 10.0),
+                child: Image.network(countryData['flags']['png']),
+              ),
+              Container(
+                child: Text(countryData['flags']['alt']),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
