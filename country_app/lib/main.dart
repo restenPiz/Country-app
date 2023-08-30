@@ -53,41 +53,38 @@ class _MainAppState extends State<MainApp> {
         ),
         body: ListView(
           children: [
-            
             //?Percorrendo o laco para printar os dados
             for(var item in apiData)
-            Container(
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.white,
-                  onPrimary: Colors.black,
-                ),
-                onPressed: (){
-
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ShowScreen(),
-                    ),
-                  );
-
-                },
-                child: Column(
-                  children: [
-                    ListTile(
-                      title: Text(item['name']['common']),
-                      subtitle: Text(item['name']['official']),
-                      leading: Image.network(
-                        item['flags']['png'],
-                        width: 80,
-                        height: 48,
-                        fit: BoxFit.cover,
-                      ),
-                    ),    
-                  ],
-                ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                primary: Colors.white,
+                onPrimary: Colors.black,
               ),
-            ),          
+              onPressed: (){
+
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ShowScreen(),
+                  ),
+                );
+
+              },
+              child: Column(
+                children: [
+                  ListTile(
+                    title: Text(item['name']['common']),
+                    subtitle: Text(item['name']['official']),
+                    leading: Image.network(
+                      item['flags']['png'],
+                      width: 80,
+                      height: 48,
+                      fit: BoxFit.cover,
+                    ),
+                  ),    
+                ],
+              ),
+            ),       
           ],
         ),
 
