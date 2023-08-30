@@ -24,7 +24,7 @@ class _MainAppState extends State<MainApp> {
   //!Inicio do metodo responsavel por fazer o fetch dos dados
   List<Map<String, dynamic>> apiData = [];
 
-  //? Função para buscar dados da API e atualizar o estado
+  //* Função para buscar dados da API e atualizar o estado
   Future<void> fetchData() async {
 
     final response = await http.get(
