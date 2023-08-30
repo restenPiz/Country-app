@@ -1,8 +1,9 @@
 // ignore_for_file: avoid_print, avoid_unnecessary_containers, prefer_const_constructors, prefer_const_literals_to_create_immutables
-import 'package:country_app/Screens/show.dart';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:country_app/Screens/show.dart';
 
 void main() {
   runApp(const MainApp());
@@ -40,6 +41,12 @@ class _MainAppState extends State<MainApp> {
     fetchData(); // Buscar dados da API quando o widget é inicializado
   }
 
+  void navigateToShowScreen(Map<String, dynamic> countryData) {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => ShowScreen(countryData: countryData)),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -62,9 +69,7 @@ class _MainAppState extends State<MainApp> {
               ),
               onPressed: (){
 
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const ShowScreen()),
-                );
+                navigateToShowScreen(item); 
 
               },
               child: Column(
@@ -88,11 +93,33 @@ class _MainAppState extends State<MainApp> {
         //?Inicio do butao de pesquisa
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const ShowScreen()),
-            );
+            navigateToShowScreen(apiData[0]);
           },
           child: Icon(Icons.search),
+        ),
+      ),
+    );
+  }
+}
+
+class ShowScreen extends StatelessWidget {
+  final Map<String, dynamic> countryData;
+  const ShowScreen({required this.countryData});
+
+  @override
+  Widget build(BuildContext context) {
+    // Use the countryData to display specific country details
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Country Details'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Country Name: ${countryData['name']['common']}'),
+            // Display other country details as needed
+          ],
         ),
       ),
     );
