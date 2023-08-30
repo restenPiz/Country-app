@@ -20,7 +20,11 @@ class ShowScreens extends StatelessWidget {
                 child: Image.network(countryData['flags']['png']),
               ),
               Container(
-                child: Text(countryData['flags']['alt']),
+                child: Column(
+                  children: [
+                    Text(countryData['flags']['alt'])
+                  ],
+                ),
               ),
             ],
           ),
