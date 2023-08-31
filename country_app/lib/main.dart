@@ -105,7 +105,7 @@ class _MainAppState extends State<MainApp> {
         //?Inicio do butao de pesquisa
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            navigateToShowScreen(apiData[0]);
+            
           },
           child: Icon(Icons.search),
         ),
