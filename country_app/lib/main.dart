@@ -57,6 +57,8 @@ class _MainAppState extends State<MainApp> {
   TextEditingController searchController = TextEditingController();
   bool isSearchOpen = false;
 
+  //! Inicio do metodo que e responsavel por mudar o estado da pesquisa
+
   @override
   Widget build(BuildContext context) {
 
