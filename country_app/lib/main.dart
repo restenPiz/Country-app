@@ -53,6 +53,10 @@ class _MainAppState extends State<MainApp> {
     );
   }
 
+  //!Declarando os dados que serao importantes na pesquisa
+  TextEditingController searchController = TextEditingController();
+  bool isSearchOpen = false;
+
   @override
   Widget build(BuildContext context) {
 
@@ -62,7 +66,9 @@ class _MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Country App'),
+          title: isSearchOpen
+          ? SearchAppBar(controller: searchController)
+          : AppBar(title: Text('Country App')),
         ),
         body: ListView(
           children: [
