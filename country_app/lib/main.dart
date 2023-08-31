@@ -79,6 +79,8 @@ class _MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
+
+          //*Creating a simple method to validate the state of search
           title: isSearchOpen
           ? SearchAppBar(controller: searchController)
           : AppBar(title: Text('Country App')),
