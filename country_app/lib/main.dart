@@ -116,11 +116,24 @@ class _MainAppState extends State<MainApp> {
 
 //*Inicio da widget que vai o conter input de pesquisa
 
-class SearchAppBar extends StatelessWidget {
-  const SearchAppBar({super.key});
+class SearchAppBar extends StatelessWidget implements PreferredSizeWidget{
+
+  final TextEditingController controller;
+
+  SearchAppBar({required this.controller});
+
+  @override
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AppBar(
+      title: TextField(
+        controller: controller,
+        decoration: InputDecoration(
+          hintText: 'Digite sua pesquisa',
+        ),
+      ),
+    );
   }
 }
