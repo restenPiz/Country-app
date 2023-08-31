@@ -58,6 +58,17 @@ class _MainAppState extends State<MainApp> {
   bool isSearchOpen = false;
 
   //! Inicio do metodo que e responsavel por mudar o estado da pesquisa
+  void toogleSearch(){
+    setState((){
+
+      //*Altera o estado do search
+      isSearchOpen = !isSearchOpen;
+      
+      if(!isSearchOpen){
+        searchController.clear();
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
