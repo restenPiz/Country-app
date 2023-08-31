@@ -30,6 +30,7 @@ class ShowScreens extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+                      //*Inicio da bandeira do lado esquerdo
                       leading: Image.network(countryData['flags']['png']),
                     ),
                   ),
