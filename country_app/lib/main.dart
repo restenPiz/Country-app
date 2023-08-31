@@ -105,11 +105,22 @@ class _MainAppState extends State<MainApp> {
         //?Inicio do butao de pesquisa
         floatingActionButton: FloatingActionButton(
           onPressed: (){
-            
+
           },
           child: Icon(Icons.search),
         ),
       ),
     );
+  }
+}
+
+//*Inicio da widget que vai o conter input de pesquisa
+
+class SearchAppBar extends StatelessWidget {
+  const SearchAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
   }
 }
