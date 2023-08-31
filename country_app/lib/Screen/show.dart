@@ -70,8 +70,6 @@ class ShowScreens extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            Container(
-                            ),
                           ],
                         ),
                       ),
