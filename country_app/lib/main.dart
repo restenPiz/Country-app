@@ -27,6 +27,7 @@ class _MainAppState extends State<MainApp> {
   //* Função para buscar dados da API e atualizar o estado
   Future<void> fetchData() async {
 
+    //*Capturando os dados apartir da API
     final response = await http.get(
       Uri.parse('https://restcountries.com/v3.1/independent?status=true')
     );
