@@ -147,6 +147,7 @@ class SearchAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   Widget build(BuildContext context) {
+    //*Inicio do appbar
     return AppBar(
       title: TextField(
         controller: controller,
