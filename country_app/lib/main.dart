@@ -108,7 +108,7 @@ class _MainAppState extends State<MainApp> {
 
                     //*Afastando o listTile para esquerda
                     contentPadding: EdgeInsets.only(left: 1.0),
-
+                    //Inicio do titulo e do testo que vao ser responsaveis por colocar os dads
                     title: Text(item['name']['common']),
                     subtitle: Text(item['name']['official']),
                     leading: Image.network(
