@@ -124,7 +124,7 @@ class _MainAppState extends State<MainApp> {
           ],
         ),
 
-        //?Inicio do butao de pesquisa
+        //Inicio do floating button de pesquisa
         floatingActionButton: FloatingActionButton(
           onPressed: toogleSearch,
           child: Icon(Icons.search),
