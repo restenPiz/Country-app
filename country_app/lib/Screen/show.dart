@@ -62,6 +62,7 @@ class ShowScreens extends StatelessWidget {
                                 height: 2,
                               ),
                             ),
+                            //Inicio do texto que mostra o nome da capital
                             Text(
                               //?Mix the datas
                               'The capital of '
