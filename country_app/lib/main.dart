@@ -31,7 +31,8 @@ class _MainAppState extends State<MainApp> {
     final response = await http.get(
       Uri.parse('https://restcountries.com/v3.1/independent?status=true')
     );
-    
+
+    //Inicio do metodo de redirecionamento
     if (response.statusCode == 200) {
       setState(() {
         apiData = List<Map<String, dynamic>>.from(json.decode(response.body));
